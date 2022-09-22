@@ -30,6 +30,7 @@ const Header = () => {
         setShow(false);
         navigate(e.target.getAttribute('href'));
     };
+    
     return <>
         <div> 
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="light">
