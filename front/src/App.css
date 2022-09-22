@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+/*close btn css*/
+.Icon {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Icon span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 23px;
+  height: 5px;
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  transform: rotate(0deg);
+  transition: .2s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Icon span:nth-child(1),
+.Icon span:nth-child(3) {
+  width: 50%;
+  transform: rotate(45deg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Icon span:nth-child(1) {
+  left: 3px;
+  top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.Icon span:nth-child(2) {
+  transform: rotate(-45deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Icon span:nth-child(3) {
+  left: 20px;
+  top: 31px;
 }
+
+.Icon.open span:nth-child(1),
+.Icon.open span:nth-child(3) {
+    left: -1px;
+}
+
+.Icon.open span:nth-child(1) {
+  top: 15px;
+  transform: rotate(135deg);
+}
+
+.Icon.open span:nth-child(2) {
+  transform: rotate(0deg);
+}
+
+.Icon.open span:nth-child(3) {
+  top: 31px;
+  transform: rotate(45deg);
+}
+/*close btn css*/
