@@ -6,6 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Figure from 'react-bootstrap/Figure';
 import Accordion from 'react-bootstrap/Accordion';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import Bg1 from '../../images/login.png';
+import Bg2 from '../../images/register.png';
+import Bg3 from '../../images/remote.png';
 
 const Home = () => {
     const [index, setIndex] = useState(0);
@@ -30,42 +33,45 @@ const Home = () => {
         setCounter(100);
     },[]);
     return <>
-        <ProgressBar style={{display: bar, height: "2px", borderRadius:'0px'}} animated striped variant="danger" now={counter} ></ProgressBar>
+        <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
           <div className="section-1">                   
-            <Carousel activeIndex={index} onSelect={handleSelect} variant={carousalVariant}>
+            <Carousel activeIndex={index} onSelect={handleSelect} variant={carousalVariant} style={{height: "850px"}}>
               <Carousel.Item>
                 <img
+                  style={{height: "850px"}}
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200&q=80"
+                  src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="First slide"
                 />
-                <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <Carousel.Caption  style={{margin: "400px"}}>
+                  <h2 className='fs-1 fw-bold text-uppercase'>First slide label</h2>
+                  <p className='text-uppercase'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
+                  style={{height: "850px"}}
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1530543787849-128d94430c6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200&q=80"
+                  src="https://images.unsplash.com/photo-1530543787849-128d94430c6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="Second slide"
                 />
 
-                <Carousel.Caption>
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <Carousel.Caption  style={{margin: "400px"}}>
+                  <h2 className='fs-1 fw-bold text-uppercase'>Second slide label</h2>
+                  <p className='text-uppercase'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
+                  style={{height: "850px"}}
                   className="d-block w-100"
-                  src="https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=200&q=80"
+                  src="https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="Third slide"
                 />
 
-                <Carousel.Caption>
-                  <h3>Third slide label</h3>
-                  <p>
+                <Carousel.Caption style={{margin: "400px"}}>
+                  <h2 className='fs-1 fw-bold text-uppercase'>Third slide label</h2>
+                  <p className='text-uppercase'>
                     Praesent commodo cursus magna, vel scelerisque nisl consectetur.
                   </p>
                 </Carousel.Caption>
@@ -82,7 +88,7 @@ const Home = () => {
                       height={600}
                       style={{borderRadius: "2%"}}
                       alt="171x180"
-                      src="https://images.unsplash.com/photo-1661961111247-e218f67d1cd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&h=600&q=80"
+                      src={Bg1}
                     />
                   </Figure>
                 </Col>
@@ -99,8 +105,8 @@ const Home = () => {
             <Row xs={1} md={3}>
               {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
                 <Col>
-                  <Card>
-                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1663524789649-be7ffa0877a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&h=200&q=80" />
+                  <Card className='border-0'>
+                    <Card.Img style={{height: "400px"}} variant="top" src={Bg2} />
                     <Card.Body>
                       <Card.Title>Card title</Card.Title>
                       <Card.Text>
@@ -112,8 +118,8 @@ const Home = () => {
                   </Card>
                 </Col>
                 <Col>
-                  <Card>
-                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1663668566893-7a4887f9a41d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&h=200&q=80" />
+                  <Card className='border-0'>
+                    <Card.Img style={{height: "400px"}} variant="top" src={Bg1} />
                     <Card.Body>
                       <Card.Title>Card title</Card.Title>
                       <Card.Text>
@@ -125,8 +131,8 @@ const Home = () => {
                   </Card>
                 </Col>
                 <Col>
-                  <Card>
-                    <Card.Img variant="top" src="https://images.unsplash.com/photo-1663746393126-e783961041d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&h=200&q=80" />
+                  <Card className='border-0'>
+                    <Card.Img style={{height: "400px"}} variant="top" src={Bg3} />
                     <Card.Body>
                       <Card.Title>Card title</Card.Title>
                       <Card.Text>
