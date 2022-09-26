@@ -11,9 +11,12 @@ const NoPageFound = () => {
       }, 800);
       setCounter(100);
   },[]);
+
   return <>
-    <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
-    <div>NoPageFound</div>
+    <div id="no-page-found">
+      <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
+      <div>NoPageFound</div>
+    </div>
   </>
 }
 

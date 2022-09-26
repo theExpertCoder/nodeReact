@@ -11,9 +11,12 @@ const ContactUs = () => {
         }, 800);
         setCounter(100);
     },[]);
+
     return <>
-      <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
-      <div>ContactUs</div>
+      <div id="contact-us">
+        <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
+        <div>ContactUs</div>
+      </div>
     </>
   }
   

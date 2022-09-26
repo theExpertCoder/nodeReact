@@ -10,14 +10,13 @@ import Bg1 from '../../images/login.png';
 import Bg2 from '../../images/register.png';
 import Bg3 from '../../images/remote.png';
 
+
 const Home = () => {
     const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
-    };
+    const handleSelect = (selectedIndex, e) => setIndex(selectedIndex);
 
-    var carousalVariant;
+    var carousalVariant = '';
     if (index !== 0) {
       carousalVariant = 'dark';
     } else {
@@ -32,44 +31,46 @@ const Home = () => {
         }, 800);
         setCounter(100);
     },[]);
+
     return <>
-        <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
+        <div id="home">
+          <ProgressBar style={{display: bar, height: "5px", borderRadius:'0px'}} animated striped variant="primary" now={counter} ></ProgressBar>
           <div className="section-1">                   
-            <Carousel activeIndex={index} onSelect={handleSelect} variant={carousalVariant} style={{height: "850px"}}>
+            <Carousel activeIndex={index} onSelect={handleSelect} variant={carousalVariant} style={{height: "800px"}}>
               <Carousel.Item>
                 <img
-                  style={{height: "850px"}}
+                  style={{height: "800px"}}
                   className="d-block w-100"
                   src="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="First slide"
                 />
-                <Carousel.Caption  style={{margin: "400px"}}>
+                <Carousel.Caption>
                   <h2 className='fs-1 fw-bold text-uppercase'>First slide label</h2>
                   <p className='text-uppercase'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  style={{height: "850px"}}
+                  style={{height: "800px"}}
                   className="d-block w-100"
                   src="https://images.unsplash.com/photo-1530543787849-128d94430c6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="Second slide"
                 />
 
-                <Carousel.Caption  style={{margin: "400px"}}>
+                <Carousel.Caption>
                   <h2 className='fs-1 fw-bold text-uppercase'>Second slide label</h2>
                   <p className='text-uppercase'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                  style={{height: "850px"}}
+                  style={{height: "800px"}}
                   className="d-block w-100"
                   src="https://images.unsplash.com/photo-1531685250784-7569952593d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
                   alt="Third slide"
                 />
 
-                <Carousel.Caption style={{margin: "400px"}}>
+                <Carousel.Caption>
                   <h2 className='fs-1 fw-bold text-uppercase'>Third slide label</h2>
                   <p className='text-uppercase'>
                     Praesent commodo cursus magna, vel scelerisque nisl consectetur.
@@ -103,7 +104,6 @@ const Home = () => {
           <div className="section-3 g-4 p-5">
             <h2 className='text-center pb-5'>PROJECT INFO</h2>
             <Row xs={1} md={3}>
-              {/* {Array.from({ length: 3 }).map((_, idx) => ( */}
                 <Col>
                   <Card className='border-0'>
                     <Card.Img style={{height: "400px"}} variant="top" src={Bg2} />
@@ -143,7 +143,6 @@ const Home = () => {
                     </Card.Body>
                   </Card>
                 </Col>
-              {/* ))} */}
             </Row>
           </div>
           <div className="section-4 g-4 p-5" >
@@ -175,6 +174,7 @@ const Home = () => {
               </Accordion.Item>
             </Accordion>
           </div>
+        </div>
     </>
   }
   

@@ -4,9 +4,9 @@ import { Outlet } from "react-router-dom";
 
 const AdminLayout = () => {
     return <>
-        <Header />            
-            <Outlet />
-        <Footer />
+        <Header />          
+            <Outlet/>            
+        <Footer/>
     </>
 
 }

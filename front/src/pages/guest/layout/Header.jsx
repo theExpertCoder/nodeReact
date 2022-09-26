@@ -7,7 +7,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 // browserHistory.push('/some/path')
 
-const Header = ({func}) => {
+const Header = () => {
    
     // console.log(name)
     const navigate = useNavigate();
@@ -30,14 +30,13 @@ const Header = ({func}) => {
         setShow(false);
         navigate(e.target.getAttribute('href'));
     };
-    func('ys');
     return <>
         <div> 
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="light">
             <Container fluid>
-                <Navbar.Brand className='text-white fw-semibold fs-1' href="/" onClick={changeNavigation}>React</Navbar.Brand>
+                <Navbar.Brand className='text-white fw-semibold fs-2' href="/" onClick={changeNavigation}>React</Navbar.Brand>
 
-                <div id="icon" className="Icon open" onClick={handleShow} >
+                <div id="icon" className="Icon-nav me-3" onClick={handleShow} >
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,9 +53,9 @@ const Header = ({func}) => {
                     <Offcanvas.Body>
                         <Nav className="ms-auto text-white">
                             <Nav.Link href="/" onClick={changeNavigation}>Home</Nav.Link>
-                            <Nav.Link href="/about" onClick={changeNavigation}>Contact</Nav.Link>
-                            <Nav.Link href="/contact" onClick={changeNavigation}>About</Nav.Link>
-                            <Nav.Link href="/dashboard" onClick={changeNavigation}>Dashboard</Nav.Link>                        
+                            <Nav.Link href="/about" onClick={changeNavigation}>About</Nav.Link>
+                            <Nav.Link href="/contact" onClick={changeNavigation}>Contact</Nav.Link>
+                            <Nav.Link href="/dashboard" onClick={changeNavigation}>Dashboard</Nav.Link>                    
                         </Nav>
                     </Offcanvas.Body>
                 </Offcanvas>
